@@ -1,15 +1,23 @@
 
-@import url(https://fonts.googleapis.com/css?family=Raleway:500);
+@font-face{
+  font-family:'Karrik'
+  src:url('Karrik-Regular.woff')
+  format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+}
 /* Hide open button when menu is open */
 #open:checked {
   display: none;
-  visibility: hidden;
+
 }
 
 /* Hide nav when menu is closed */
 #closed:checked~nav {
   display: none;
-  visibility: hidden;
+
 }
 
 /* Nav styling */
@@ -55,10 +63,11 @@ label[for="open"] {
   background-color: blue;
   padding: .75em;
   color: white;
-  border-radius: 9em;
+  border-radius: 1em;
+  left: -100vw;
 }
 label[for="closed"] {
-  text-align: right;
+  text-align:right;
   display: block;
   font-size: 9em;
   opacity: 0.5;
