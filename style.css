@@ -219,5 +219,5 @@ header {
 }
 
 body {
-  background: lightblue url("/Users/akapadia/Documents/GitHub/Ashkap4/trainplatofrm.jpeg") no-repeat fixed center;
+  background: url("/Users/akapadia/Documents/GitHub/Ashkap4/trainplatofrm.jpeg") no-repeat fixed center;
 }
