@@ -1,0 +1,225 @@
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:500);
+body{
+  width:100%;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  background:hsla(212, 5%, 95%, 1);
+  font-family: 'Raleway', sans-serif;
+
+    & h1{
+    text-align:center;
+    margin-top:35px;
+    color:hsla(0,0%,20%,1);
+    letter-spacing:1px;
+    text-shadow:1px 1px hsla(212, 5%, 95%, 1),
+      -1px -1px hsla(212, 5%, 95%, 1);
+    }
+}
+
+$finalHeight: 550px;
+$finalWidth: 1 * $finalHeight;
+$scrollBarHeight: 25px;
+
+::-webkit-scrollbar {
+ width: $scrollBarHeight;
+ height: $scrollBarHeight;
+}
+
+::-webkit-scrollbar-button {
+ width: $scrollBarHeight;
+ height: $scrollBarHeight;
+}
+
+body {
+ background: #111;
+}
+
+div {
+ box-sizing: border-box;
+}
+
+.horizontal-scroll-wrapper {
+ position: absolute;
+ display: block;
+ top: 80px;
+ width: calc(#{$finalHeight} + #{$scrollBarHeight});
+ max-height:$finalWidth;
+ margin: 0;
+ padding-top: $scrollBarHeight;
+ background: #abc;
+ overflow-y: auto;
+ overflow-x: hidden;
+ transform: rotate(-90deg) translateY(-$finalHeight);
+ transform-origin: right top;
+ & > div {
+   display: block;
+   padding: 5px;
+   background: #cab;
+   transform: rotate(90deg);
+   transform-origin: right top;
+ }
+}
+
+.squares {
+ padding: $finalHeight 0 0 0;
+ & > div {
+   width: $finalHeight;
+   height: $finalHeight;
+   margin: 20px 0;
+ }
+}
+div{
+  box-sizing:border-box;
+}
+
+body {
+  background: #111;
+}
+
+.horizontal-scroll-wrapper{
+  position:absolute;
+  display: flow-root;
+  top:0;
+  left:350px;
+  width:500px;
+  max-height:800px;
+  margin:25px;
+  background:black;
+  overflow-y:auto;
+  overflow-x:hidden;
+  transform:rotate(-90deg) translateY(-80px);
+  transform-origin:right top;
+}
+.horizontal-scroll-wrapper > div{
+  display:block;
+  padding:5px;
+  background:#cab;
+  transform:rotate(90deg);
+  transform-origin: right top;
+}
+
+.squares{
+  padding:80px 0 0 0;
+}
+
+.squares > div{
+  width:240px;
+  height:200px;
+  margin:60px;
+  border-radius: 10px;
+}
+
+.rectangles{
+  top:140px;
+  padding:100px 0 0 0;
+}
+.rectangles > div{
+  width:140px;
+  height:100px;
+  margin:50px 10px;
+  padding:5px;
+  background:#cab;
+  transform:rotate(90deg) translateY(80px);
+  transform-origin: right top;
+}
+
+input {
+  display: none;
+}
+
+/* Style header */
+header {
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+}
+
+/* Hide open button when menu is open */
+#open:checked {
+  display: none;
+  visibility: hidden;
+}
+
+/* Hide nav when menu is closed */
+#closed:checked~nav {
+  display: none;
+  visability: hidden;
+}
+
+/* Nav styling */
+nav {
+  background-color: blue;
+  color: white;
+  width: 50vw;
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  margin: 0;
+  padding: 2em;
+  top: 0;
+  z-index: 999;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 150%;
+  line-height: 250%;
+}
+
+/* Style the background overlay when menu is open */
+nav::before {
+  content: "";
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: -100vw;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  opacity: .9;
+}
+
+/* Style visible checkbox labels */
+label[for="closed"] {
+  text-align: right;
+  display: block;
+  font-size: 1em;
+  opacity: 0.5;
+  text-transform: lowercase;
+}
+
+label[for="open"] {
+  background-color: blue;
+  padding: .75em;
+  color: white;
+  border-radius: 1em;
+}
+
+label:hover {
+  cursor: pointer;
+  opacity: .8;
+  transition: all .5s ease;
+}
+
+
+@media screen and ( max-height:550px ){
+    .info{
+      display:none;
+    }
+}
+@media screen and ( max-width:450px ){
+    h1{
+      font-size:7.5vw;
+    }
+}
+
+body {
+  background: lightblue url("/Users/akapadia/Documents/GitHub/Ashkap4/trainplatofrm.jpeg") no-repeat fixed center;
+}
